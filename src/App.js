@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from "react";
 import "./App.css";
 function App(){
-  const [message,setMessage] = useState("");
+  const [message,setMessage] = useState([]);
   
   useEffect(()=>{
     fetch("http://localhost:8000/message")
@@ -11,7 +11,7 @@ function App(){
 
   return (
     <div className="App">
-    <h1>{message}</h1>
+    <h1>The message from the server : {message}</h1>
     </div>
   )
 }
